@@ -1,7 +1,7 @@
 
 {% for elemento in post_list %}
 
-    <h1>{{elemento.title}}</h1>
+    <a href="{% url 'detail' elemento.pk %}"><h1>{{elemento.title}}</h1></a>
     <br>
 
 {% empty %}
