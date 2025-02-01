@@ -1,4 +1,9 @@
 
+{% extends "navbar.html" %}
+
+
+{% block content %}
+
 {% for elemento in post_list %}
 
     <a href="{% url 'detail' elemento.pk %}"><h1>{{elemento.title}}</h1></a>
@@ -9,3 +14,5 @@
     <p>No has agregado elementos</p>
 
 {% endfor %}
+
+{% endblock %}
