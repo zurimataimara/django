@@ -2,43 +2,18 @@
 <html>
 <head>
     <title>Mi Navbar</title>
-    <style>
-        nav {
-            background-color: #640D5F; /* Color de fondo principal */
-            overflow: hidden;
-        }
-
-        nav a {
-            float: left;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        nav a:hover {
-            background-color: #D96156; /* Color al pasar el mouse */
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-    </style>
-</head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">  </head>
 <body>
 
 <nav>
     <a href="#" class="logo">Mi Empresa</a>
     <a href="{% url 'home' %}">Home</a>
-    <a href="{% url 'create' %}">Create</a> 
+    <a href="{% url 'create' %}">Create</a>
     <a href="#">Logout</a>
 </nav>
 
-
 {% block content %}
-
 
 {% endblock %}
 

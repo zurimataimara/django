@@ -1,0 +1,60 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif; /* Puedes elegir la fuente que más te guste */
+    margin: 0;
+    background-color: #f4f4f4; /* Color de fondo claro */
+    color: #333; /* Color de texto oscuro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Para que el footer se ajuste a la pantalla */
+}
+
+.content {
+    width: 80%;
+    margin: 20px auto;
+    flex: 1; /* Para que el contenido principal ocupe el espacio disponible */
+}
+
+/* Estilos para la silueta de la luna */
+.moon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ddd; /* Color de la luna */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilos para los elementos del portafolio */
+.portfolio-item {
+    background-color: #fff; /* Fondo blanco para los recuadros */
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.portfolio-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.portfolio-item h1 {
+    font-style: italic; /* Letra cursiva */
+}
+
+/* Estilo para el efecto hover */
+.portfolio-item:hover {
+    transform: translateY(-5px); /* Se desplaza un poco hacia arriba */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Estilos para el mensaje de "No has agregado elementos" */
+.empty-message {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+}

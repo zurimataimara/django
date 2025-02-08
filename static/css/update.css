@@ -1,0 +1,79 @@
+/* Estilos generales para el formulario */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #7e57c2, #512da8); /* Degradado de violeta */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los campos del formulario */
+form p {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff; /* Texto blanco */
+}
+
+form input[type="text"],
+form input[type="file"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffffff; /* Borde blanco */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="file"]:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #e1bee7; /* Violeta claro */
+    box-shadow: 0 0 8px rgba(225, 190, 231, 0.6); /* Sombra violeta */
+    outline: none;
+}
+
+/* Estilos para el botón de submit */
+form input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e1bee7; /* Violeta claro */
+    color: #512da8; /* Texto violeta oscuro */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ffffff; /* Fondo blanco al hacer hover */
+    color: #512da8; /* Texto violeta oscuro */
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+/* Efecto de vibración al pasar el cursor sobre los campos */
+form input[type="text"]:hover,
+form input[type="file"]:hover,
+form textarea:hover,
+form select:hover {
+    animation: vibrate 0.3s ease-in-out;
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
