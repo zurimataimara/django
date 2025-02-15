@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+
     <title>Mi Navbar</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">  
@@ -13,7 +13,12 @@
     <a href="#" class="logo">Mi Empresa</a>  
     <a href="{% url 'home' %}">Home</a>      
     <a href="{% url 'create' %}">Create</a>  
-    <a href="#">Logout</a>                  
+
+    <form action="{% url 'logout' %}" method="post"> 
+
+        {% csrf_token %}
+        <button class="logout">Logout</button>
+    </form>                 
 </nav>
 
 {% block content %}
