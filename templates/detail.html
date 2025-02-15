@@ -1,13 +1,24 @@
 
-<h1>{{post.title}}:</h1>
+{% load static %}
 
-<p>{{post.description}}</p>
+<link rel="stylesheet" href="{% static 'css/detail.css' %}">
 
-{% if post.image %}
-<img src="{{ post.image.url }}" alt="">
-{% else %}
-<h3>Quiero comer helado</h3>
-{% endif %}
 
-<a href="{% url 'update' post.pk %}">Actulizar</a>
-<a href="{% url 'delete' post.pk %}">Eliminar</a>
+<div class="detail-container">
+
+
+    <h1>{{ post.title }}:</h1>
+
+    
+    <p>{{ post.description }}</p>
+
+    {% if post.image %}
+    <img src="{{ post.image.url }}" alt="{{ post.title }}">
+    {% else %}
+    <h3>Quiero comer helado</h3>
+    {% endif %}
+
+    <a href="{% url 'update' post.pk %}">Actualizar</a>
+    <a href="{% url 'delete' post.pk %}">Eliminar</a>
+
+</div>

@@ -5,26 +5,31 @@
 
 {% block content %}
 
+
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
 
 <div class="content">
 
-{% for elemento in post_list %}
+    
+    {% for elemento in post_list %}
 
-<div class="portfolio-item">
+    <div class="portfolio-item">
 
-<a href="{% url 'detail' elemento.pk %}"><h1>{{elemento.title}}</h1></a>
+     
+        <a href="{% url 'detail' elemento.pk %}">
+            <h1>{{elemento.title}}</h1>
+        </a>
+
+    </div>
+
+    
+    {% empty %}
+
+    <p class="empty-message">No has agregado elementos</p>
+
+    {% endfor %}
 
 </div>
-
-{% empty %}
-
-<p class="empty-message">No has agregado elementos</p>
-
-{% endfor %}
-
-</div>
-
-
 
 {% endblock %}

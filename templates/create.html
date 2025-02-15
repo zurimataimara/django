@@ -3,16 +3,25 @@
 {% block content %}
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'css/update.css' %}">
 
-<form method="post" enctype="multipart/form-data">
+<link rel="stylesheet" href="{% static 'css/create.css' %}">
 
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="save" >
 
-</form>
+<div class="create-container">
 
-{% endblock %}   
+    
+    <form method="post" enctype="multipart/form-data">
 
-{% load static %}
+        {% csrf_token %}
+
+       
+        {{ form.as_p }}
+
+        
+        <input type="submit" value="Guardar">
+
+    </form>
+
+</div>
+
+{% endblock %}
