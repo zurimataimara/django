@@ -1,14 +1,25 @@
-{% if user.is_authenticated %}
+{% load static %}
 
-<h3>Bienvenido {{user.username}}</h3>
-<a href="{% url 'home' %}"> Ingresar</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
+</head>
+<body>
+    <div class="welcome-container">
+        {% if user.is_authenticated %}
+            <h3 class="welcome-message">Bienvenido {{ user.username }}</h3>
+            <a href="{% url 'home' %}" class="btn">Ingresar</a>
+        {% else %}
+            <p class="welcome-text">Crea tu cuenta, te esperamos</p>
+            <a href="{% url 'signup' %}" class="btn">Sign Up</a>
 
-{% else %}
-   
-   <p>Crea tu cuenta, te esperamos</p>
-   <a href="{% url 'signup' %}">Sin up</a>
-
-   <p>Si ya posees una cuenta, te esperamos por aca </p>
-   <a href="{% url 'login ' %}">Login</a>
-
-   {% endif %}
+            <p class="welcome-text">Si ya posees una cuenta, te esperamos por acá</p>
+            <a href="{% url 'login' %}" class="btn">Login</a>
+        {% endif %}
+    </div>
+</body>
+</html>

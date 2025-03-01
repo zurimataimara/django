@@ -1,0 +1,52 @@
+/* Estilos generales del navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796B; /* Fondo oceánico oscuro */
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el logo */
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF; /* Texto blanco */
+    text-decoration: none;
+}
+
+/* Contenedor de los enlaces */
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Estilos para los enlaces */
+nav .nav-links a {
+    color: #FFFFFF; /* Texto blanco */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: #B2DFDB; /* Color oceánico claro al pasar el ratón */
+}
+
+/* Estilos para el botón de logout */
+nav .nav-links .logout {
+    background-color: #004D40; /* Fondo oceánico más oscuro */
+    color: #FFFFFF; /* Texto blanco */
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav .nav-links .logout:hover {
+    background-color: #00251A; /* Fondo oceánico más oscuro al pasar el ratón */
+}

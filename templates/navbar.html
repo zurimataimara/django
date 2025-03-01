@@ -1,29 +1,27 @@
+{% load static %}
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Navbar</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">  
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 </head>
 <body>
+    <nav>
+        <a href="#" class="logo">Mi Empresa</a>
+        <div class="nav-links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'create' %}">Create</a>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="logout">Logout</button>
+            </form>
+        </div>
+    </nav>
 
-<nav>
-    <a href="#" class="logo">Mi Empresa</a>  
-    <a href="{% url 'home' %}">Home</a>      
-    <a href="{% url 'create' %}">Create</a>  
-
-    <form action="{% url 'logout' %}" method="post"> 
-
-        {% csrf_token %}
-        <button class="logout">Logout</button>
-    </form>                 
-</nav>
-
-{% block content %}
-
-{% endblock %}
-
+    {% block content %}
+    {% endblock %}
 </body>
 </html>
